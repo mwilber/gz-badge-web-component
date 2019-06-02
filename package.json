@@ -2,8 +2,9 @@
   "name": "gz-badge",
   "version": "1.0.0",
   "description": "GreenZeta Badge Web Component",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
+    "build": "babel --presets es2015 src/main.js --out-file dist/gz-badge.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
