@@ -1,3 +1,5 @@
+import * as webcomponentsloader from '@webcomponents/webcomponentsjs/webcomponents-loader';
+
 window.customElements.define('gz-badge', class extends HTMLElement {
   
     constructor(){
