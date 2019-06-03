@@ -14,10 +14,10 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         'webcomponents-loader': path.join('@webcomponents/webcomponentsjs', 'webcomponents-loader'),
-        'bundles/webcomponents-sd-ce-pf': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce-pf'),
-        'bundles/webcomponents-sd-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce'),
-        'bundles/webcomponents-sd': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd'),
-        'bundles/webcomponents-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-ce'),
+        'polyfills/bundles/webcomponents-sd-ce-pf': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce-pf'),
+        'polyfills/bundles/webcomponents-sd-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce'),
+        'polyfills/bundles/webcomponents-sd': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd'),
+        'polyfills/bundles/webcomponents-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-ce'),
         bundle: path.join(dirApp, 'main')
     },
     output: {

@@ -1,3 +1,8 @@
+window.WebComponents = window.WebComponents || {};
+window.WebComponents.root = 'polyfills/';
+
+//import '@webcomponents/webcomponentsjs/webcomponents-loader';
+
 window.customElements.define('gz-badge', class extends HTMLElement {
   
     constructor(){
