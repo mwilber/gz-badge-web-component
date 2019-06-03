@@ -40,4 +40,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: publication
+              only: master
