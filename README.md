@@ -1,0 +1,1 @@
+#gz-badge Web Component
