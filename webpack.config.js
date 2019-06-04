@@ -9,7 +9,7 @@ const dirApp = path.join(__dirname, 'src');
  * Webpack Configuration
  */
 module.exports = {
-    mode: 'development',
+    mode: 'production',
 
     devtool: 'source-map',
     entry: {
@@ -46,6 +46,11 @@ module.exports = {
                 options: {
                     compact: true
                 }
+            },
+            // SVG
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ]
     }
