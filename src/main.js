@@ -1,7 +1,7 @@
 window.WebComponents = window.WebComponents || {};
 window.WebComponents.root = 'polyfills/';
 
-//import '@webcomponents/webcomponentsjs/webcomponents-loader';
+import imageData from 'gz_badge.svg';
 
 window.customElements.define('gz-badge', class extends HTMLElement {
   
@@ -40,7 +40,7 @@ window.customElements.define('gz-badge', class extends HTMLElement {
         </style>
         
         <a id="gzlink" href="http://apps.greenzeta.com" target="_blank">
-          <img alt="A GreenZeta Production" src="${this.getImageData()}">
+          <img alt="A GreenZeta Production" src="${imageData}">
         </a>
       `;
     }
