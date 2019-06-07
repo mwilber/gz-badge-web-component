@@ -13,7 +13,7 @@ module.exports = {
 
     devtool: 'source-map',
     entry: {
-        'webcomponents-loader': path.join('@webcomponents/webcomponentsjs', 'webcomponents-loader'),
+        //'webcomponents-loader': path.join('@webcomponents/webcomponentsjs', 'webcomponents-loader'),
         'polyfills/bundles/webcomponents-sd-ce-pf': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce-pf'),
         'polyfills/bundles/webcomponents-sd-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce'),
         'polyfills/bundles/webcomponents-sd': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd'),
