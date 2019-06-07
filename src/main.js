@@ -1,13 +1,9 @@
-window.WebComponents = window.WebComponents || {};
-window.WebComponents.root = 'polyfills/';
-
-
 import imageData from 'gz_badge.svg';
-import "@babel/polyfill";
-import "webcomponents-loader";
+//import "@babel/polyfill";
+//import "webcomponents-loader";
 
 console.log('web component next');
-window.customElements.define('gz-badge', class extends HTMLElement {
+class GzBadge extends HTMLElement {
   
     constructor(){
       super();
@@ -48,4 +44,9 @@ window.customElements.define('gz-badge', class extends HTMLElement {
         </a>
       `;
     }
+  }
+
+  document.addEventListener('WebComponentsReady', function(e) {
+    alert('WebComponentsReady!!!');
+    window.customElements.define('gz-badge', GzBadge);
   });
