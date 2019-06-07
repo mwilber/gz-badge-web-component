@@ -1,9 +1,10 @@
 import imageData from 'gz_badge.svg';
-//import "@babel/polyfill";
+import "@babel/polyfill";
+//import "@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf";
 //import "webcomponents-loader";
+import "@webcomponents/webcomponentsjs/webcomponents-bundle";
 
-console.log('web component next');
-class GzBadge extends HTMLElement {
+window.customElements.define('gz-badge', class extends HTMLElement {
   
     constructor(){
       super();
@@ -44,9 +45,4 @@ class GzBadge extends HTMLElement {
         </a>
       `;
     }
-  }
-
-  document.addEventListener('WebComponentsReady', function(e) {
-    alert('WebComponentsReady!!!');
-    window.customElements.define('gz-badge', GzBadge);
   });
