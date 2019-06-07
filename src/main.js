@@ -4,7 +4,7 @@ window.WebComponents.root = 'polyfills/';
 
 import imageData from 'gz_badge.svg';
 import "@babel/polyfill";
-import "@webcomponents/webcomponentsjs/webcomponents-loader";
+import "webcomponents-loader";
 
 console.log('web component next');
 window.customElements.define('gz-badge', class extends HTMLElement {
