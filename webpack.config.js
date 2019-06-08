@@ -15,12 +15,11 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         components: path.join(dirApp, 'components'),
-        //'webcomponents-loader': path.join('@webcomponents/webcomponentsjs', 'webcomponents-loader'),
+        'webcomponents-loader': path.join(dirApp, 'webcomponents-loader'),
         'polyfills/webcomponents-sd-ce-pf': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce-pf'),
         'polyfills/webcomponents-sd-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce'),
         'polyfills/webcomponents-sd': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd'),
-        'polyfills/webcomponents-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-ce'),
-        bundle: path.join(dirApp, 'main')
+        'polyfills/webcomponents-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-ce')
     },
     output: {
         path: path.join(__dirname, 'dist'),
