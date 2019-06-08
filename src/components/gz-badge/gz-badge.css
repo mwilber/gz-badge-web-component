@@ -1,4 +1,4 @@
-#gzlink{
+.gzlink{
     display: block; 
     position: fixed; 
     bottom: 0px; 
@@ -11,6 +11,6 @@
     min-width: 150px; 
     z-index: 1000;
   }
-  #gzlink img{
+  .gzlink img{
     width: 100%;
   }

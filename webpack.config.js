@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'src');
@@ -52,7 +53,14 @@ module.exports = {
             // STYLES
             {
                 test:/\.css$/,
-                use:['css-loader']
+                use: [
+                    'style-loader',
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                        },
+                    }]
             },
             // SVG
             {
