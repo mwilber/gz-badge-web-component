@@ -1,3 +1,4 @@
+import cssData from './gz-badge.css';
 import imageData from './gz_badge.svg';
 
 window.customElements.define('gz-badge', class extends HTMLElement {
@@ -18,22 +19,7 @@ window.customElements.define('gz-badge', class extends HTMLElement {
     renderTemplate(){
       return `
         <style>
-          #gzlink{
-            display: block; 
-            position: fixed; 
-            bottom: 0px; 
-            right: 0px; 
-            margin: 0px; 
-            padding: 0px; 
-            height: auto; 
-            width: 40%; 
-            max-width: 250px; 
-            min-width: 150px; 
-            z-index: 1000;
-          }
-          #gzlink img{
-            width: 100%;
-          }
+          ${cssData}
         </style>
         
         <a id="gzlink" href="http://apps.greenzeta.com" target="_blank">

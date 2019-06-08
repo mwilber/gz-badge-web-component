@@ -49,6 +49,11 @@ module.exports = {
                     compact: true
                 }
             },
+            // STYLES
+            {
+                test:/\.css$/,
+                use:['css-loader']
+            },
             // SVG
             {
                 test: /\.svg$/,
