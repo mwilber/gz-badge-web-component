@@ -146,7 +146,7 @@
 
     if (polyfills.length) {
       var url;
-      var polyfillFile = 'bundles/webcomponents-' + polyfills.join('-') + '.js';
+      var polyfillFile = 'polyfills/webcomponents-' + polyfills.join('-') + '.js';
   
       // Load it from the right place.
       if (window.WebComponents.root) {

@@ -34,6 +34,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'index.ejs'),
+            inject: 'body',
             // Order of the script tags is important here. The polyfills have to load first.
             chunks: ['webcomponents-loader', 'components'],
             chunksSortMode: 'manual'
