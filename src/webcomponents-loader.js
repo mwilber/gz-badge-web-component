@@ -1,4 +1,44 @@
+/**
+ * @license
+ * Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
+
 (function() {
+    'use strict';
+  
+    /**
+     * Basic flow of the loader process
+     *
+     * There are 4 flows the loader can take when booting up
+     *
+     * - Synchronous script, no polyfills needed
+     *   - wait for `DOMContentLoaded`
+     *   - fire WCR event, as there could not be any callbacks passed to `waitFor`
+     *
+     * - Synchronous script, polyfills needed
+     *   - document.write the polyfill bundle
+     *   - wait on the `load` event of the bundle to batch Custom Element upgrades
+     *   - wait for `DOMContentLoaded`
+     *   - run callbacks passed to `waitFor`
+     *   - fire WCR event
+     *
+     * - Asynchronous script, no polyfills needed
+     *   - wait for `DOMContentLoaded`
+     *   - run callbacks passed to `waitFor`
+     *   - fire WCR event
+     *
+     * - Asynchronous script, polyfills needed
+     *   - Append the polyfill bundle script
+     *   - wait for `load` event of the bundle
+     *   - batch Custom Element Upgrades
+     *   - run callbacks pass to `waitFor`
+     *   - fire WCR event
+     */
   
     var polyfillsLoaded = false;
     var whenLoadedFns = [];
@@ -64,7 +104,7 @@
     };
     window.WebComponents._batchCustomElements = batchCustomElements;
   
-    var name = 'bundle.js';
+    var name = 'webcomponents-loader.js';
     // Feature detect which polyfill needs to be imported.
     var polyfills = [];
     if (!('attachShadow' in Element.prototype && 'getRootNode' in Element.prototype) ||
@@ -102,18 +142,16 @@
   
     if (polyfills.length) {
       var url;
-      var polyfillFile = '/node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-' + polyfills.join('-') + '.js';
+      var polyfillFile = 'bundles/webcomponents-' + polyfills.join('-') + '.js';
   
       // Load it from the right place.
-      // if (window.WebComponents.root) {
-      //   url = window.WebComponents.root + polyfillFile;
-      // } else {
-      //   var script = document.querySelector('script[src*="' + name +'"]');
-      //   // Load it from the right place.
-      //   url = script.src.replace(name, polyfillFile);
-      // }
-
-      url = '/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js';
+      if (window.WebComponents.root) {
+        url = window.WebComponents.root + polyfillFile;
+      } else {
+        var script = document.querySelector('script[src*="' + name +'"]');
+        // Load it from the right place.
+        url = script.src.replace(name, polyfillFile);
+      }
   
       var newScript = document.createElement('script');
       newScript.src = url;
