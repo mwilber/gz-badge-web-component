@@ -1,7 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'src');
@@ -38,10 +36,7 @@ module.exports = {
             // Order of the script tags is important here. The polyfills have to load first.
             chunks: ['webcomponents-loader', 'components'],
             chunksSortMode: 'manual'
-        }),
-        // new ScriptExtHtmlWebpackPlugin({
-        //     module: ['bundle.js']
-        // })
+        })
     ],
     module: {
         rules: [
