@@ -92,7 +92,7 @@
         console.error(err);
       });
     }
-  
+
     window.WebComponents = window.WebComponents || {};
     window.WebComponents.ready = window.WebComponents.ready || false;
     window.WebComponents.waitFor = window.WebComponents.waitFor || function(waitFn) {
@@ -105,6 +105,8 @@
       }
     };
     window.WebComponents._batchCustomElements = batchCustomElements;
+
+    console.log('webcomponents-loader', 'ck1');
   
     var name = 'webcomponents-loader.js';
     // Feature detect which polyfill needs to be imported.
@@ -138,10 +140,10 @@
   
     // NOTE: any browser that does not have template or ES6 features
     // must load the full suite of polyfills.
-    if (!window.Promise || !Array.from || !window.URL || !window.Symbol || needsTemplate) {
+    //if (!window.Promise || !Array.from || !window.URL || !window.Symbol || needsTemplate) {
       polyfills = ['sd-ce-pf'];
-    }
-  
+    //}
+
     if (polyfills.length) {
       var url;
       var polyfillFile = 'bundles/webcomponents-' + polyfills.join('-') + '.js';
@@ -154,7 +156,7 @@
         // Load it from the right place.
         url = script.src.replace(name, polyfillFile);
       }
-  
+
       var newScript = document.createElement('script');
       newScript.src = url;
       // if readyState is 'loading', this script is synchronous
