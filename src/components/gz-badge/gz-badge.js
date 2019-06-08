@@ -6,7 +6,7 @@ window.customElements.define('gz-badge', class extends HTMLElement {
     constructor(){
       super();
       let shadowRoot = this.attachShadow({mode: 'open'});
-      shadowRoot.innerHTML = this.renderTemplate();
+      shadowRoot.innerHTML = this.render();
     }
     
     connectedCallback() {
@@ -16,7 +16,7 @@ window.customElements.define('gz-badge', class extends HTMLElement {
               'http://greenzeta.com');
     }
     
-    renderTemplate(){
+    render(){
       return `
         <style>
           ${cssData}
