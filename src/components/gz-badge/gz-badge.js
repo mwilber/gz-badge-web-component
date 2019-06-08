@@ -1,4 +1,4 @@
-import imageData from 'gz_badge.svg';
+import imageData from './gz_badge.svg';
 
 window.customElements.define('gz-badge', class extends HTMLElement {
   
