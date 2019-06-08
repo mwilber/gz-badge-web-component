@@ -10,7 +10,7 @@ const dirApp = path.join(__dirname, 'src');
 module.exports = {
     mode: 'production',
 
-    devtool: 'source-map',
+    //devtool: 'source-map',
     entry: {
         'components': path.join(dirApp, 'components'),
         'webcomponents-loader': path.join('@webcomponents/webcomponentsjs', 'webcomponents-loader'),
