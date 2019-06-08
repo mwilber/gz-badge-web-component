@@ -7,7 +7,9 @@
     "start": "npm run dev",
     "dev": "webpack-dev-server --port 8699 --progress --open --config webpack.config.js",
     "build": "webpack --progress --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wc:create": "node scripts/create.js",
+    "wc:delete": "node scripts/delete.js"
   },
   "repository": {
     "type": "git",

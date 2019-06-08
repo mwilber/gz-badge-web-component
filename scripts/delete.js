@@ -15,7 +15,7 @@ const QUESTIONS = [
 
 inquirer.prompt(QUESTIONS)
   .then(answers => {
-    console.log(answers);
+    //console.log(answers);
     let componentName = answers['component-to-delete'];
     deleteFolderRecursive(`${componentsPath}/${componentName}`);
     // Delete the import from the components.js file
