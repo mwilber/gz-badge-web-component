@@ -13,8 +13,8 @@ const QUESTIONS = [
     }
   ];
 
-const templatePath = `${__dirname}/../component`;
-const componentsPath = `${__dirname}/../../src/components`;
+const templatePath = `${__dirname}/templates/component`;
+const componentsPath = `${__dirname}/../src/components`;
 
 inquirer.prompt(QUESTIONS)
   .then(answers => {

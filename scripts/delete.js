@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const componentsPath = `${__dirname}/../../src/components`;
+const componentsPath = `${__dirname}/../src/components`;
 const COMPONENTS = fs.readdirSync(componentsPath);
 
 const QUESTIONS = [
