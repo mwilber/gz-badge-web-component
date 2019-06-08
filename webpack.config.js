@@ -14,6 +14,7 @@ module.exports = {
 
     devtool: 'source-map',
     entry: {
+        components: path.join(dirApp, 'components'),
         //'webcomponents-loader': path.join('@webcomponents/webcomponentsjs', 'webcomponents-loader'),
         'polyfills/webcomponents-sd-ce-pf': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce-pf'),
         'polyfills/webcomponents-sd-ce': path.join('@webcomponents/webcomponentsjs/bundles', 'webcomponents-sd-ce'),
