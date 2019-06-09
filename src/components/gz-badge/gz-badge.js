@@ -65,7 +65,7 @@ window.customElements.define('gz-badge', class extends HTMLElement {
             <a class="fb icon" href="http://www.facebook.com/greenzeta" target="_blank">${fbImage}</a>
             <a class="gh icon" href="https://github.com/mwilber" target="_blank">${ghImage}</a>
             <a class="cp icon" href="https://codepen.io/mwilber/" target="_blank">${cpImage}</a>
-            <a class="ws" href="https://www.greenzeta.com/" target="_blank">GreenZeta.com</a>
+            <a class="ws" href="https://www.greenzeta.com/" target="_blank"><span>GreenZeta.com</span></a>
           </div>
           ${imageData}
         </div>

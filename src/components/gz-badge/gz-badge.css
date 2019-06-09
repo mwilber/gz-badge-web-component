@@ -15,50 +15,57 @@
 svg{
   width: 100%;
   height: auto;
+  position: relative;
+  z-index: 5;
 }
 .drawer{
-  display: none;
+  display: block;
   height: auto;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
-  grid-template-rows: auto;
-  grid-gap: 0;
-  grid-template-areas: 
-    'header header header header header' 
-    'content content content content content' 
-    'tw fb gh cp website';
   padding: 0;
   background: rgba(255, 255, 255, 0.8);
   color: #444;
   font-family: sans-serif;
   line-height: 1;
   border-radius: 5px 0 0 0;
+  float: left;
+  transform: translateY(100%);
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: transform 250ms ease-in-out 0ms, opacity 50ms ease-in-out 200ms;
 }
 .drawer-open .drawer{
-  display: grid;
+  display: block;
+  transform: translateY(0%);
+  opacity: 1;
+  transition: transform 250ms ease-in-out 0ms, opacity 50ms ease-in-out 0ms;
 }
 .drawer-open #Caret{
   display: none;
 }
 .drawer h1{
-  grid-area: header;
   font-size: 1.5em;
   padding: 5% 5% 0 5%;
   margin: 0;
 }
 .drawer p{
-  grid-area: content;
   font-size: 0.75em;
   padding: 5%;
   margin: 0;
 }
 .drawer a{
+  position: relative;
   display: inline-block;
   color: #fff;
   text-decoration: none;
   line-height: 0;
+  width: 12%;
+  padding-bottom: 12%;
+  float: left;
 }
 .drawer a svg{
+  position: absolute;
   margin: 15%;
   width: 70%;
 }
@@ -66,25 +73,28 @@ svg{
   fill: #fff;
 }
 .drawer .tw{
-  grid-area: tw;
   background-color: #00aced;
 }
 .drawer .fb{
-  grid-area: fb;
   background-color: #3B5998;
 }
 .drawer .gh{
-  grid-area: gh;
   background-color: #000;
 }
 .drawer .cp{
-  grid-area: cp;
   background-color: #666;
 }
 .drawer .ws{
-  grid-area: website;
+  width: 52%;
   line-height: 2;
   font-size: 1em;
   text-align: center;
   background-color: #7bb951;
+}
+
+.drawer .ws span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 }
