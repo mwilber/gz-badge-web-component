@@ -13,4 +13,5 @@ storiesOf('Demo', module)
   });
 
   storiesOf('gz-badge', module)
-  .add('default', () => '<gz-badge></gz-badge>');
+  .add('default', () => '<gz-badge></gz-badge>')
+  .add('clicked', () => '<gz-badge drawer="open"></gz-badge>');

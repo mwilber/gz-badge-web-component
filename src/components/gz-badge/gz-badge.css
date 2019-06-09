@@ -14,3 +14,17 @@
   #gzlink img{
     width: 100%;
   }
+  .drawer{
+    display: none;
+    position: absolute;
+    background: #333;
+    height: auto;
+    width: 100%;
+    padding-bottom: 40%;
+    bottom: 0;
+    z-index: 0;
+    margin-bottom: 17%;
+  }
+  .drawer-open .drawer{
+    display: block;
+  }
