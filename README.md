@@ -16,7 +16,7 @@ The webpack configuration generates a single bundle containing all of your compo
 The project comes with the sample web component `<gz-badge>` but let's walk through the steps for creating a web component from scratch:
 
 - Run `npm install` from the project directory to install Webpack and all other dependencies
-- Next, run `npm start`. This will start up the Webpack development server and open the build project in your default browser. Once the build process is complete you should see a mostly blank page with the `<gz-badge>` component in the lower right corner.
+- Next, run `npm start`. This will start up the Webpack development server and open the built project in your default browser. Once the build process is complete you should see a mostly blank page with the `<gz-badge>` component in the lower right corner.
 - Now let's make our first web component. The command `npm run wc:create` will generate all of the boilerplate code to get you started. Before doing that, it will prompt you for a component name. Let's call it `hello-world`.
     - **Important:** A web component name must be composed of only letters and dashes and must include at least one dash.
 - At this point, if you look in the project `src/components` directory you will see a directory `hello-world`. In it there is a javascript file and a css file which make up your web component. 
