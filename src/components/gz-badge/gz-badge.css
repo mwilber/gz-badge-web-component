@@ -10,21 +10,78 @@
   max-width: 250px; 
   min-width: 150px; 
   z-index: 1000;
+  line-height: 0;
 }
-#gzlink img{
+svg{
   width: 100%;
+  height: auto;
 }
 .drawer{
   display: none;
-  position: absolute;
-  background: #333;
   height: auto;
   width: 100%;
-  padding-bottom: 40%;
-  bottom: 0;
-  z-index: 0;
-  margin-bottom: 17%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  grid-template-areas: 
+    'header header header header header' 
+    'content content content content content' 
+    'tw fb gh cp website';
+  padding: 0;
+  background: rgba(255, 255, 255, 0.8);
+  color: #444;
+  font-family: sans-serif;
+  line-height: 1;
+  border-radius: 5px 0 0 0;
 }
 .drawer-open .drawer{
-  display: block;
+  display: grid;
+}
+.drawer h1{
+  grid-area: header;
+  font-size: 1.5em;
+  padding: 5% 5% 0 5%;
+  margin: 0;
+}
+.drawer p{
+  grid-area: content;
+  font-size: 0.75em;
+  padding: 5%;
+  margin: 0;
+}
+.drawer a{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  line-height: 0;
+}
+.drawer a svg{
+  margin: 15%;
+  width: 70%;
+}
+.drawer a svg path{
+  fill: #fff;
+}
+.drawer .tw{
+  grid-area: tw;
+  background-color: #00aced;
+}
+.drawer .fb{
+  grid-area: fb;
+  background-color: #3B5998;
+}
+.drawer .gh{
+  grid-area: gh;
+  background-color: #000;
+}
+.drawer .cp{
+  grid-area: cp;
+  background-color: #666;
+}
+.drawer .ws{
+  grid-area: website;
+  line-height: 2;
+  font-size: 1em;
+  text-align: center;
+  background-color: #7bb951;
 }

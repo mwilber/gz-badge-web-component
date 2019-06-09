@@ -1,5 +1,9 @@
 import cssData from './gz-badge.css';
 import imageData from './gz_badge.svg';
+import twImage from './twitter-brands.svg';
+import fbImage from './facebook-brands.svg';
+import ghImage from './github-brands.svg';
+import cpImage from './codepen-brands.svg';
 
 window.customElements.define('gz-badge', class extends HTMLElement {
   
@@ -54,8 +58,16 @@ window.customElements.define('gz-badge', class extends HTMLElement {
         </style>
         
         <div id="gzlink">
+          <div class="drawer">
+            <h1>Over 15 years of cutting edge web development</h1>
+            <p>JavaScript, CSS, PHP, ASP.net</p>
+            <a class="tw icon" href="http://twitter.com/greenzeta" target="_blank">${twImage}</a>
+            <a class="fb icon" href="http://www.facebook.com/greenzeta" target="_blank">${fbImage}</a>
+            <a class="gh icon" href="https://github.com/mwilber" target="_blank">${ghImage}</a>
+            <a class="cp icon" href="https://codepen.io/mwilber/" target="_blank">${cpImage}</a>
+            <a class="ws" href="https://www.greenzeta.com/" target="_blank">GreenZeta.com</a>
+          </div>
           ${imageData}
-          <div class="drawer">Some links here</div>
         </div>
       `;
     }
