@@ -37,6 +37,9 @@ svg{
 .drawer-open .drawer{
   display: grid;
 }
+.drawer-open #Caret{
+  display: none;
+}
 .drawer h1{
   grid-area: header;
   font-size: 1.5em;
