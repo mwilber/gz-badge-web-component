@@ -24,7 +24,10 @@ window.customElements.define('gz-badge', class extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {
       switch (name) {
         case 'drawer':
-          this.shadowRoot.querySelector('#gzlink').classList.add('drawer-open');
+          if(newValue === 'open')
+            this.shadowRoot.querySelector('#gzlink').classList.add('drawer-open');
+          else
+            this.shadowRoot.querySelector('#gzlink').classList.remove('drawer-open');
           break;
       }
     }
@@ -37,7 +40,10 @@ window.customElements.define('gz-badge', class extends HTMLElement {
 
       this.addEventListener('click', function(e) {
         console.log('Active element (inside shadow dom):', this.shadowRoot.activeElement);
-        this.shadowRoot.querySelector('#gzlink').classList.toggle('drawer-open');
+        if(this.drawer === 'open')
+          this.drawer = '';
+        else
+          this.drawer = 'open';
       });
     }
     
