@@ -48,11 +48,13 @@ svg{
   font-size: 1.5em;
   padding: 5% 5% 0 5%;
   margin: 0;
+  text-align: center;
 }
 .drawer p{
   font-size: 0.75em;
   padding: 5%;
   margin: 0;
+  text-align: justify;
 }
 .drawer a{
   position: relative;

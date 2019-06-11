@@ -59,8 +59,8 @@ window.customElements.define('gz-badge', class extends HTMLElement {
         
         <div id="gzlink">
           <div class="drawer">
-            <h1>Over 15 years of cutting edge web development</h1>
-            <p>JavaScript, CSS, PHP, ASP.net</p>
+            <h1>CTA HERE</h1>
+            <p>Do incididunt id laboris aute cupidatat dolor. Exercitation ipsum occaecat nostrud consequat anim veniam. Magna est esse adipisicing pariatur culpa Lorem dolore deserunt dolore est consectetur id qui sit.</p>
             <a class="tw icon" href="http://twitter.com/greenzeta" target="_blank">${twImage}</a>
             <a class="fb icon" href="http://www.facebook.com/greenzeta" target="_blank">${fbImage}</a>
             <a class="gh icon" href="https://github.com/mwilber" target="_blank">${ghImage}</a>
