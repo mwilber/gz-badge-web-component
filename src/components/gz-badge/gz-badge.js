@@ -59,13 +59,18 @@ window.customElements.define('gz-badge', class extends HTMLElement {
         
         <div id="gzlink">
           <div class="drawer">
-            <h1>CTA HERE</h1>
-            <p>Do incididunt id laboris aute cupidatat dolor. Exercitation ipsum occaecat nostrud consequat anim veniam. Magna est esse adipisicing pariatur culpa Lorem dolore deserunt dolore est consectetur id qui sit.</p>
+            <h1>FIND OUT MORE!</h1>
+            <p>
+              GreenZeta apps are all about experimenting with the latest web technologies. 
+              Click on the links below to get the lates updates on social media. Head over 
+              to <a href="https://www.greenzeta.com/?utm_source=gz-badge" target="_blank">GreenZeta.com</a> 
+              to see all the projects with updates, screen shots and more.
+            </p>
             <a class="tw icon" href="http://twitter.com/greenzeta" target="_blank">${twImage}</a>
             <a class="fb icon" href="http://www.facebook.com/greenzeta" target="_blank">${fbImage}</a>
             <a class="gh icon" href="https://github.com/mwilber" target="_blank">${ghImage}</a>
             <a class="cp icon" href="https://codepen.io/mwilber/" target="_blank">${cpImage}</a>
-            <a class="ws" href="https://www.greenzeta.com/" target="_blank"><span>GreenZeta.com</span></a>
+            <a class="ws" href="https://www.greenzeta.com/?utm_source=gz-badge" target="_blank"><span>GreenZeta.com</span></a>
           </div>
           ${imageData}
         </div>
