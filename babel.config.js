@@ -4,8 +4,8 @@ module.exports={
             "@babel/preset-env",
             {
                 targets:{
-                    //"esmodules": true,
-                    "ie": "11",
+                    "browsers": [">0.25%", "not op_mini all"],
+                    "uglify": true,
                 },
                 useBuiltIns:"usage",
             }
