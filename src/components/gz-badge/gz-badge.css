@@ -115,3 +115,12 @@ svg{
   left: 50%;
   transform: translate(-50%, -40%);
 }
+
+/*
+* Mobile Styles
+*/
+@media only screen and (max-width : 575px) {
+  .drawer{
+    font-size: 8px;
+  }
+}
