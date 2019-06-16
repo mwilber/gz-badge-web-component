@@ -43,8 +43,14 @@ svg{
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 0ms, opacity 50ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 0ms;
 }
+#Caret{
+  transform: rotateX(0deg);
+  transform-origin: 116.5px 6px;
+  transition: transform 250ms cubic-bezier(0.860, 0.000, 0.070, 1.000) 0ms;
+}
 .drawer-open #Caret{
-  display: none;
+  /* display: none; */
+  transform: rotateX(180deg);
 }
 .drawer a, .drawer a:hover, .drawer a:visited, .drawer a:active{
   color: #444;
